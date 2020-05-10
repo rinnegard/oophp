@@ -29,7 +29,7 @@ $app->router->get("guess/play", function () use ($app) {
     ];
 
     $app->page->add("guess/play", $data);
-    $app->page->add("guess/debug", $data);
+    // $app->page->add("guess/debug", $data);
     return $app->page->render([
         "title" => $title,
     ]);
@@ -43,7 +43,7 @@ $app->router->post("guess/processing", function () use ($app) {
     if ($_POST["submit"] === "Guess") {
         try {
             $_SESSION["status"] = $_SESSION["game"]->makeGuess($_POST["guess"]);
-        } catch ( Viri\Guess\GuessException $e) {
+        } catch (Viri\Guess\GuessException $e) {
             $_SESSION["status"] = "Guess out of bounds";
         }
     } elseif ($_POST["submit"] === "Restart") {
