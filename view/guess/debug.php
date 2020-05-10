@@ -12,5 +12,5 @@ namespace Anax\View;
 ?>
 
 <h1>Debugging</h1>
-<p>SESSION <?php var_dump($_SESSION) ?></p>
-<p>POST <?php var_dump($_POST) ?></p>
+<pre>SESSION <?php var_dump($_SESSION) ?></pre>
+<pre>POST <?php var_dump($_POST) ?></pre>

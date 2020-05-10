@@ -21,8 +21,4 @@ if ($_POST["submit"] === "Guess") {
     $_SESSION["cheat"] = $_SESSION["game"]->number();
 }
 
-var_dump($_POST);
-
-var_dump($_SESSION["status"]);
-
 header("Location: index.php");
